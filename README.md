@@ -1,2 +1,2 @@
 # mycv
- kendi cv sitem
+ admin panelli, panele sadece benim girebildiğim cv sitem.
