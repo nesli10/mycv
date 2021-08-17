@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EgitimController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\IndexController;
 use \App\Http\Controllers\deneyimController;
@@ -13,13 +14,13 @@ Route::get('/',[IndexController::class, 'Index']);
 
 Route::prefix('admin')->middleware('auth')->group(function (){
     Route::get('/', [AdminController::class, 'admin'])->name('adminn');
-    Route::get('/egitimm', [EgitimController::class, 'egitimm'])->name('egitimm');
-    Route::get('/egitimEkle', [EgitimController::class, 'egitimEkle'])->name('egitimEkle');
-    Route::post('/egitimEklendi', [EgitimController::class, 'egitimEklendi'])->name('egitimEklendi');
-    Route::get('/egitimEkle', [EgitimController::class, 'egitimEkle'])->name('egitimEkle');
-    Route::post('/egitimSil', [EgitimController::class, 'egitimSil'])->name("egitimSil");
+    Route::get('/egitimm', [Egitimcontroller::class, 'egitimm'])->name('egitimm');
+    Route::get('/egitimEkle', [Egitimcontroller::class, 'egitimEkle'])->name('egitimEkle');
+    Route::post('/egitimEklendi', [Egitimcontroller::class, 'egitimEklendi'])->name('egitimEklendi');
+    Route::get('/egitimEkle', [Egitimcontroller::class, 'egitimEkle'])->name('egitimEkle');
+    Route::post('/egitimSil', [Egitimcontroller::class, 'egitimSil'])->name("egitimSil");
     Route::post('/guncelle', [Egitimcontroller::class, 'guncelle'])->name('guncelle');
-    Route::get('/guncellen/{egitimId?}', [EgitimController::class, 'guncellen'])->name('guncellen');
+    Route::get('/guncellen/{egitimId?}', [Egitimcontroller::class, 'guncellen'])->name('guncellen');
     Route::get('/deneyim', [deneyimController::class, 'deneyim'])->name('deneyim');
     Route::get('/deneyimEkle', [deneyimController::class, 'deneyimEkle'])->name('deneyimEkle');
     Route::post('/deneyimEklendi', [deneyimController::class, 'deneyimEklendi'])->name('deneyimEklendi');
@@ -50,4 +51,8 @@ Route::prefix('admin')->middleware('auth')->group(function (){
 
 });
 
-
+Route::get('/artisan', function(){
+   Artisan::call('optimize:clear');
+   Artisan::call('optimize');
+   Artisan::call('storage:link');
+});

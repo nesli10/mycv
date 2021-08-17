@@ -24,7 +24,6 @@ class deneyimController extends Controller
         $save = deneyimModel::updateOrCreate(
             ["deneyimid" => $request->deneyimid],
             [
-                "baslik" => $request->baslik,
                 "pozisyon" => $request->pozisyon,
                 "calismayeri" => $request->calismayeri,
                 "tarih" => $request->tarih,
