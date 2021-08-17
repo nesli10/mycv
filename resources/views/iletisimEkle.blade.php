@@ -98,8 +98,6 @@
             }
             let errorMsg = "";
             if(data.adres == "") errorMsg += "- adres alanı boş bırakılamaz.<br>";
-            if(data.telefon == "" ) errorMsg += "- telefon alanı boş bırakılamaz.<br>";
-            else if (data.telefon.length != 11 || !Number.isInteger(parseInt(data.telefon))) errorMsg += " -telefon 11 haneli olmalıdır.<br> -telefon kısmına harf girilemez.<br>";
             if(data.email == "") errorMsg += "- email alanı boş bırakılamaz.<br>";
 
             if(errorMsg != "") {
