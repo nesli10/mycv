@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-5">
                         <div class="avatar hover-effect bg-white shadow-sm p-1">
-                            <img src="/assets/images/faces/foto.jpg" width="200" height="200"/>
+                            <img class="profile-pic" src="{{asset("assets/images/faces")}}/{{$hakkimda->foto}}" width="200" height="200"/>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-7 text-center text-md-start">

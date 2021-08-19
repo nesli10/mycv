@@ -92,6 +92,9 @@ html {
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
+.avatar img {
+    object-fit: cover;
+}
 
 nav[role='navigation'] {
     display: inline-flex;

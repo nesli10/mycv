@@ -3,7 +3,7 @@
         <img class="nav-item nav-profile">
             <a href="{{route('hakkimdaEkle')}}" class="nav-link" >
                 <div class="nav-profile-text d-flex flex-column align-items-center">
-                    <img src="{{asset("assets/images/faces/foto.jpg")}}"s alt="profile" style="width:100px"> <br>
+                    <img src="{{asset("assets/images/faces/foto3.jpg")}}"s alt="profile" style="width:100px"> <br>
 
                     <a style="color: #0b0e11; ">
                     <span  class="font-weight-bold mb-2">Neslişah Ebral Durdu</span>
