@@ -78,15 +78,14 @@
             <div class="skills-section px-3 px-lg-4">
                 <div class="row">
                     <h2 class="h3 mb-3">YETKİNLİK</h2>
-
-                @foreach($yetkinlik AS $value)
+                    @foreach($yetkinlik AS $value)
                     <div class="col-md-6">
                         <div class="mb-2"><span>{{ $value->yetkinlikadi }} </span>
-                            <div class="progress my-1">
-                                <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: {{ $value->seviye }}%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                        <div class="progress my-1">
+                        <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: {{ $value->seviye }}%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </div>
+                        </div>
+                        </div>
                     @endforeach
                 </div>
             </div>
